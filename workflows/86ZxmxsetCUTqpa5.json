@@ -1,0 +1,62 @@
+{
+  "active": false,
+  "connections": {
+    "When chat message received": {
+      "main": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "createdAt": "2025-06-26T03:44:22.127Z",
+  "id": "86ZxmxsetCUTqpa5",
+  "isArchived": false,
+  "meta": null,
+  "name": "My workflow",
+  "nodes": [
+    {
+      "parameters": {
+        "public": true,
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.chatTrigger",
+      "typeVersion": 1.1,
+      "position": [
+        -420,
+        -180
+      ],
+      "id": "d341cbb2-e931-41e3-868f-f0e469793b26",
+      "name": "When chat message received",
+      "webhookId": "366bb542-7391-49f4-ac44-de3fe2078ccf"
+    },
+    {
+      "parameters": {
+        "options": {
+          "systemMessage": "You are a helpful assistant\n\nuse airbnb to search for accomodation\nuse firecrawl to scrape websites\nuse brave to search the web\n\nalways use search for the tool first before execution the run"
+        }
+      },
+      "type": "@n8n/n8n-nodes-langchain.agent",
+      "typeVersion": 2,
+      "position": [
+        -200,
+        -180
+      ],
+      "id": "7502eedb-ace5-4f58-9cde-f0d169433ebd",
+      "name": "AI Agent"
+    }
+  ],
+  "pinData": {},
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "staticData": null,
+  "tags": [],
+  "triggerCount": 0,
+  "updatedAt": "2025-06-26T03:44:22.127Z",
+  "versionId": "e117065b-6adf-4f56-9fee-c2c3089c5335"
+}
